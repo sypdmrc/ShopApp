@@ -9,15 +9,15 @@ namespace ShopApp.WebUI.Controllers
     public class ProductController:Controller
     {
         //localhost:5000/product/list
-        public string List()
+        public IActionResult List()
         {
-            return "product/list";
+            return View();
         }
 
         //localhost:5000/product/details
-        public string Details()
+        public IActionResult Details()
         {
-            return "product/details";
+            return View();
         }
     }
 }

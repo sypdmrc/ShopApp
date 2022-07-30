@@ -10,15 +10,15 @@ namespace ShopApp.WebUI.Controllers
     public class HomeController:Controller
     {
         //localhost:5000/home/index
-        public string Index()
+        public IActionResult Index()
         {
-            return "home/index";
+            return View();
         }
 
         //localhost:5000/home/about
-        public string About()
+        public IActionResult About()
         {
-            return "home/about";
+            return View();
         }
     }
 }
