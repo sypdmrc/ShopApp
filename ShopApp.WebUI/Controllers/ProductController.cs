@@ -34,18 +34,18 @@ namespace ShopApp.WebUI.Controllers
         {
             var products = new List<Product>()
             {
-                new Product{Name="Iphone 8",Price=3000,Description="İyi Telefon"},
+                new Product{Name="Iphone 8",Price=3000,Description="İyi Telefon",IsApproved=true},
                 new Product{Name="Iphone 5",Price=2000,Description="Fena Değil"},
-                new Product{Name="Iphone 7",Price=3000,Description="İyi Telefon"},
-                new Product{Name="Iphone 6",Price=4000,Description="Fena Değil"},
+                new Product{Name="Iphone 7",Price=3000,Description="İyi Telefon",IsApproved=true},
+                new Product{Name="Iphone 6",Price=4000,Description="Fena Değil",IsApproved=true},
                 new Product{Name="Iphone 9",Price=9000,Description="İyi Telefon"},
                 new Product{Name="Iphone 10",Price=12000,Description="Fena Değil"},
-                new Product{Name="Iphone 8+",Price=13000,Description="İyi Telefon"},
+                new Product{Name="Iphone 8+",Price=13000,Description="İyi Telefon",IsApproved=true},
                 new Product{Name="Iphone 11",Price=12500,Description="Fena Değil"},
                 new Product{Name="Iphone 12",Price=13500,Description="İyi Telefon"},
-                new Product{Name="Iphone 13",Price=18000,Description="Fena Değil"},
+                new Product{Name="Iphone 13",Price=18000,Description="Fena Değil",IsApproved=true},
                 new Product{Name="Iphone X",Price=30000,Description="İyi Telefon"},
-                new Product{Name="Iphone 5+",Price=2800,Description="Fena Değil"},
+                new Product{Name="Iphone 5+",Price=2800,Description="Fena Değil",IsApproved=true},
             };
 
             var category = new Category
