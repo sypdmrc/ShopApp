@@ -19,10 +19,13 @@ namespace ShopApp.WebUI.Controllers
                 Description="Güzel Telefon"
             };
 
-            ViewData["Product"] = product;
-            ViewData["Category"] = "Telefonlar";
+            //ViewData["Product"] = product;
+            //ViewData["Category"] = "Telefonlar";
 
-            return View();
+            //ViewBag.Category = "Kategoriler";
+            //ViewBag.Product = product;
+
+            return View(product);
         }
 
         //localhost:5000/product/list
