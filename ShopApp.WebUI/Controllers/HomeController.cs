@@ -12,6 +12,12 @@ namespace ShopApp.WebUI.Controllers
         //localhost:5000/home/index
         public IActionResult Index()
         {
+            int saat=DateTime.Now.Hour;
+
+            string mesaj=saat > 12 ? "İyi Günler" : "Günaydın";
+            ViewBag.Greeting = mesaj;
+            ViewBag.Username = "Şuayip Demirci";
+
             return View();
         }
 
