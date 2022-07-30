@@ -5,6 +5,9 @@
     <title></title>
 </head>
 <body>
-    <h2>Product/Index Sayfası</h2>
+    <h1>@ViewData["Category"]</h1>
+    <h2>@(((Product)ViewData["Product"]).Name)</h2>
+    <h2>@(((Product)ViewData["Product"]).Price)</h2>
+    <h2>@(((Product)ViewData["Product"]).Description)</h2>
 </body>
 </html>

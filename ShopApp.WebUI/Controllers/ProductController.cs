@@ -12,6 +12,16 @@ namespace ShopApp.WebUI.Controllers
         //localhost:5000/product/index
         public IActionResult Index()
         {
+            Product product = new Product 
+            { 
+                Name="Iphone 13",
+                Price=15000,
+                Description="Güzel Telefon"
+            };
+
+            ViewData["Product"] = product;
+            ViewData["Category"] = "Telefonlar";
+
             return View();
         }
 
