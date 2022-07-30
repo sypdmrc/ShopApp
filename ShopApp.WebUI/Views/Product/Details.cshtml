@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model ShopApp.WebUI.Models.Product;
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,8 +8,8 @@
 </head>
 <body>
     <h2>Product/Details Sayfası</h2>
-    <p>@ViewBag.Name</p>
-    <p>@ViewBag.Price</p>
-    <p>@ViewBag.Description</p>
+    <p>@Model.Name</p>
+    <p>@Model.Price</p>
+    <p>@Model.Description</p>
 </body>
 </html>
