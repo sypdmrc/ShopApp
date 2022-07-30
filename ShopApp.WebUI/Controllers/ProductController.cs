@@ -23,6 +23,9 @@ namespace ShopApp.WebUI.Controllers
         //localhost:5000/product/details
         public IActionResult Details()
         {
+            ViewBag.Name = "Samsung S6";
+            ViewBag.Price = 3000;
+            ViewBag.Description = "İyi Telefon";
             return View();
         }
     }
