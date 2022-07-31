@@ -1,90 +1,44 @@
 ﻿@model ShopApp.WebUI.ViewModels.ProductViewModel;
 
-@{
-    var populerClass = Model.Products.Count > 2 ? "popular" : "";
-}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Ürün Listesi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <style>
-        .popular {
-            color: green;
-            font-weight: 700;
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar navbar-dark bg-dark navbar-expand-sm text-white">
-        <div class="container">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 1</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 2</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 3</a>
-                </li>
+<div class="container">
+    <div class="row" style="padding-top:120px">
+        <div class="col-md-3">
+            <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">Elektronik</li>
+                <li class="list-group-item">Beyaz Eşya</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
             </ul>
         </div>
-    </div>
-    <header>
-        
-            <div class="p-5 mb-4 bg-light rounded-3">
-                <div class="container py-5">
-                    <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-                    <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-                    <button class="btn btn-primary btn-lg" type="button">Example button</button>
-                </div>
-            </div>
-      
-    </header>
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="@populerClass">@Model.Category.Name</h1>
-                </div>
-            </div>
+        <div class="col-md-9">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 row-cols-lg-3 g-3">
+                @foreach (var item in Model.Products)
+                {
+                    <div class="col">
 
-            @if (Model.Products.Count > 0)
-            {
-                <div class="row ">
+                        <div class="card">
 
-                    @foreach (var item in Model.Products)
-                    {
-                        <div class="col-md-4 mb-3">
-                            <div class="card justify-content-center">
-                                <img style="width:300px" src="data:image/jpeg;base64,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" class="card-img-top" alt="Alternate Text" />
-                                <div class="card-body">
-                                    <h5 class="card-title">@item.Name</h5>
-                                    <p class="card-text">@item.Description</p>
-                                    <a class="btn btn-primary">İncele</a>
-                                </div>
+                            <img class="card-img-top"
+                                 src="https://productimages.hepsiburada.net/s/198/550/110000168765995.jpg/format:webp"
+                                 alt="">
+
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <button class="store-item-icon text-capitalize">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                add to cart
+
+                            </button>
+                            <div class="card-body">
+                                <p>@item.Description</p>
+                                <span class="card-title">@item.Name</span>
+                                <span class="cart-price">$@item.Price</span>
                             </div>
                         </div>
-                    }
 
-                </div>
-            }
-
-            else
-            {
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-warning">
-                            Ürün Listesinde Bir Ürün Bulunmamaktadır
-                        </div>
                     </div>
-                </div>
-
-            }
+                }
+            </div>
         </div>
-    </main>
-</body>
-</html>
+    </div>
+</div>

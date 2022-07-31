@@ -20,16 +20,6 @@ namespace ShopApp.WebUI.Controllers
 
             return View();
         }
-
-        //localhost:5000/home/about
-        public IActionResult About()
-        {
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            return View("Deneme");
-        }
+          
     }
 }

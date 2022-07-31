@@ -1,25 +1,599 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-</head>
-<body>
-    <div class="navbar navbar-dark bg-dark navbar-expand-sm text-white">
-        <div class="container">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 1</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 2</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 3</a>
-                </li>
-            </ul>
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<!-- header start -->
+
+<header id="header">
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-color: rgb(255, 255, 255);">
+                <div class="container">
+                    <div class="row  row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-2 row-cols-lg-2 g-3">
+                        <div class="col">
+
+                            <div class="fpDiv text-capitalize">
+                                <div class="welcome-hero-txt">
+                                    <h4><span class="fp-name">Featured Products</span></h4>
+                                    <h3 class="text-uppercase featuredProductName">MSI Notebook</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiuiana smod
+                                        tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip.
+                                    </p>
+                                    <div class="packages-price">
+                                        <p style="color:green;">
+                                            <span class="featuredProductPrice">
+                                                $
+                                                999.00
+                                            </span><del>$ 1200.00</del>
+                                        </p>
+                                    </div>
+                                    <button class="btn-cart welcome-add-cart ">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        add to cart
+                                    </button>
+                                    <button class="welcome-add-cart welcome-more-info">more ınfo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-right">
+                            <div class="fpDiv">
+                                <div class="welcome-hero-img">
+                                    <img src="~/images/bilgisayar.jpg" width="500px" alt="website template image">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-item" style="background-color: white;">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7">
+
+                            <div class="fpDiv text-capitalize">
+                                <div class="welcome-hero-txt">
+                                    <h4><span class="fp-name">Featured Products</span></h4>
+                                    <h2 class="text-uppercase featuredProductName">SAMSUNG S20</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiuiana smod
+                                        tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip.
+                                    </p>
+                                    <div class="packages-price">
+                                        <p style="color:green;">
+                                            <span class="featuredProductPrice">$ 567.00</span>
+                                            <del>$ 800.00</del>
+                                        </p>
+                                    </div>
+                                    <button class="btn-cart welcome-add-cart ">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        add to cart
+                                    </button>
+                                    <button class="welcome-add-cart welcome-more-info">more ınfo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="fpDiv">
+                                <div class="welcome-hero-img">
+                                    <img src="https://productimages.hepsiburada.net/s/113/550/110000060955077.jpg/format:webp"
+                                         width="500px" alt="website template image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-color: white;">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7">
+
+                            <div class="fpDiv text-capitalize">
+                                <div class="welcome-hero-txt">
+                                    <h4><span class="fp-name">Featured Products</span></h4>
+                                    <h2 class="text-uppercase featuredProductName">IPHONE 13 PRO</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiuiana smod
+                                        tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip.
+                                    </p>
+                                    <div class="packages-price">
+                                        <p style="color:green;">
+                                            <span class="featuredProductPrice">
+                                                $
+                                                1200.00
+                                            </span><del>$ 2000.00</del>
+                                        </p>
+                                    </div>
+                                    <button class="btn-cart welcome-add-cart ">
+
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        add to cart
+                                    </button>
+                                    <button class="welcome-add-cart welcome-more-info">more ınfo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="fpDiv">
+                                <div class="welcome-hero-img">
+                                    <img src="https://productimages.hepsiburada.net/s/189/550/110000155170747.jpg/format:webp"
+                                         width="500px" alt="website template image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="carousel-indicators">
+                <button id="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button id="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button id="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
         </div>
     </div>
-</body>
-</html>
+</header>
+
+<!-- header end -->
+<!-- products start -->
+<section id="productsSection" class="container-fluid mt-3">
+    <div id="products" class="row">
+
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="/images/bilgisayar.jpg" alt="">
+
+                <div class="card-body">
+                    <h5 class="card-title">computers</h5>
+                    <button id="buyProduct">start shoppıng</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="~/images/telefon.jpg" alt="">
+
+                <div class="card-body">
+                    <h5 class="card-title">phones</h5>
+                    <button id="buyProduct">start shoppıng</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="~/images/tablet.jpg" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">tablets</h5>
+                    <button id="buyProduct">start shoppıng</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- products end -->
+<!-- trending products start -->
+
+<section id="trends" class="container">
+
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Trending <b>Products</b></h2>
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="false">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li id="carouseli" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                        <li id="carouseli" data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                        <li id="carouseli" data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                    </ol>
+                    <!-- carousel items -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="~/images/bilgisayar.jpg" class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4 class="carousel-name">MSI Notebook</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$400.00</strike>
+                                                <span class="carousel-price">$369.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://www.sony.com.tr/image/5d02da5df552836db894cead8a68f5f3?fmt=pjpeg&wid=165&bgcolor=FFFFFF&bgc=FFFFFF"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4 class="carousel-name">Sony Headphone</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$25.00</strike> <span class="carousel-price">$23.99</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary  addToCart">
+                                                Add to
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1633027804000"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="3">
+                                            <h4 class="carousel-name">Macbook Air</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$899.00</strike> <span class="carousel-price">$649.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary  addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/17/222-222/9779170345010.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="4">
+                                            <h4 class="carousel-name">Nikon DSLR</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$315.00</strike> <span class="carousel-price">$250.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary  addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/146/222-222/110000101090759.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="5">
+                                            <h4 class="carousel-name">Sony PlayStation 5</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$289.00</strike> <span class="carousel-price">$269.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary  addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/49/550/10983951040562.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="6">
+                                            <h4 class="carousel-name">Macbook Pro</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$1099.00</strike> <span class="carousel-price">$869.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary  addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/31/222-222/10345257238578.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="7">
+                                            <h4 class="carousel-name">Bose Speaker</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$109.00</strike> <span class="carousel-price">$99.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary  addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/178/222-222/110000143040919.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="8">
+                                            <h4 class="carousel-name">Samsung Galaxy S10</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$599.00</strike> <span class="carousel-price">$569.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/178/222-222/110000143040919.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="8">
+                                            <h4 class="carousel-name">Samsung Galaxy S10</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$599.00</strike> <span class="carousel-price">$569.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/178/222-222/110000143040919.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="8">
+                                            <h4 class="carousel-name">Samsung Galaxy S10</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$599.00</strike> <span class="carousel-price">$569.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/178/222-222/110000143040919.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="8">
+                                            <h4 class="carousel-name">Samsung Galaxy S10</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$599.00</strike> <span class="carousel-price">$569.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <div class="img-box">
+                                            <img src="https://productimages.hepsiburada.net/s/178/222-222/110000143040919.jpg/format:webp"
+                                                 class="img-fluid carouselImg" alt="">
+                                        </div>
+                                        <div class="thumb-content" id="8">
+                                            <h4 class="carousel-name">Samsung Galaxy S10</h4>
+                                            <p class="carousel-item-price">
+                                                <strike>$599.00</strike> <span class="carousel-price">$569.00</span>
+                                            </p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn btn-primary addToCart">
+                                                Add To
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!-- trending products end -->
